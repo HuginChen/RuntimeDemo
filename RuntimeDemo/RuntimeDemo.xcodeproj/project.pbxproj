@@ -13,6 +13,7 @@
 		490A26E5218C332E00B89495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490A26E4218C332E00B89495 /* Assets.xcassets */; };
 		490A26E8218C332E00B89495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490A26E6218C332E00B89495 /* LaunchScreen.storyboard */; };
 		490A26EB218C332E00B89495 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A26EA218C332E00B89495 /* main.m */; };
+		494EC26221ABEEAE00B6FFAA /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 494EC26121ABEEAE00B6FFAA /* ViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		490A26E7218C332E00B89495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		490A26E9218C332E00B89495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		490A26EA218C332E00B89495 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		494EC26021ABEEAE00B6FFAA /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		494EC26121ABEEAE00B6FFAA /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				490A26DC218C332D00B89495 /* AppDelegate.m */,
 				490A26DE218C332D00B89495 /* ViewController.h */,
 				490A26DF218C332D00B89495 /* ViewController.m */,
+				494EC26021ABEEAE00B6FFAA /* ViewController2.h */,
+				494EC26121ABEEAE00B6FFAA /* ViewController2.m */,
 				490A26E1218C332D00B89495 /* Main.storyboard */,
 				490A26E4218C332E00B89495 /* Assets.xcassets */,
 				490A26E6218C332E00B89495 /* LaunchScreen.storyboard */,
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				490A26E0218C332D00B89495 /* ViewController.m in Sources */,
+				494EC26221ABEEAE00B6FFAA /* ViewController2.m in Sources */,
 				490A26EB218C332E00B89495 /* main.m in Sources */,
 				490A26DD218C332D00B89495 /* AppDelegate.m in Sources */,
 			);
@@ -286,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R66JD33SF8;
 				INFOPLIST_FILE = RuntimeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R66JD33SF8;
 				INFOPLIST_FILE = RuntimeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

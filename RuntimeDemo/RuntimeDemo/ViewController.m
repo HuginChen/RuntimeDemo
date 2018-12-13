@@ -31,10 +31,6 @@
 #import <objc/objc-exception.h> ///< 未知
 #import <objc/objc-sync.h>      ///< 未知
 
-
-
-
-
 // 下面的文件在ios项目中不会出现，在macos项目会出现
 // #import <objc/objc-load.h>    未知
 // #import <objc/Protocol.h>     这个头文件中的方法在1.0版本的runtime可以使用，2.0版本的话用objc/runtime.h头文件中的方法
@@ -69,6 +65,7 @@
 
 @implementation Person (category)
 const void *name2_key;
+@dynamic name2;
 - (void)setName2:(NSString *)name2 {
     objc_setAssociatedObject(self, name2_key, name2, OBJC_ASSOCIATION_COPY);
 }
@@ -86,8 +83,7 @@ const void *name2_key;
 
 @implementation Person {
     NSString *_name5;
-}
-    
+}    
 - (void)run {
     NSLog(@"Person run");
 }
@@ -105,11 +101,11 @@ const void *name2_key;
 @end
 
 @interface ViewController ()
-
+    
 @end
 
 @implementation ViewController
-
+    
 - (void)viewDidLoad {
     // TODO: 1.基本介绍
     {
@@ -248,7 +244,7 @@ const void *name2_key;
             // 2.10 获取指定类的元类的Class对象，如果该类未在Objective-C运行时注册，则为nil。
             id objc_getMetaClass(const char * name);
         }
- 
+        
     }
     
     // TODO: 3.实例变量
@@ -384,7 +380,7 @@ const void *name2_key;
             
             // 2.2、获取属性特性1
             const char * property_getAttributes(objc_property_t property);
-       
+            
             // 2.3、获取属性特性值
             char * property_copyAttributeValue(objc_property_t property, const char * attributeName);
             
@@ -524,7 +520,7 @@ const void *name2_key;
             // 2.18 获取方法列表 这个方法根据传入的类不同从而获取不同的方法列表
             // 类获取是实例方法列表; 元类获取到的是类方法列表;
             Method * class_copyMethodList(Class cls, unsigned int * outCount);
- 
+            
             // 2.19 获取实例方法
             Method class_getInstanceMethod(Class cls, SEL name);
             
@@ -573,7 +569,7 @@ const void *name2_key;
                     
                     IMP rumIMP = method_getImplementation(runM);
                     IMP eatIMP = method_getImplementation(eatM);
-    
+                    
                     method_setImplementation(runM, eatIMP);
                     method_setImplementation(eatM, rumIMP);
                     
@@ -672,10 +668,7 @@ const void *name2_key;
                 }
                 NSLog(@"---------------- 分隔线 ----------------\n\n");
             }
-            
-           
         }
-        
     }
     
     // TODO: 6.类的创建、给类添加实例变量、属性、方法
@@ -792,10 +785,10 @@ const void *name2_key;
                 NSLog(@"-------- 分割线 --------");
             }
             NSLog(@"\n");
-        
+            
             // 5.注册类
             objc_registerClassPair(newClass);
-       
+            
             // 6.添加类方法 添加到元类的就是类方法
             /*
              因为这里演示的代码是通过objc_allocateClassPair方法分配的Class，所以在调用objc_registerClassPair方法之前无法添加类方法。
@@ -826,11 +819,8 @@ const void *name2_key;
                 NSLog(@"类方法 - 名称：%s - 实现：%p - 类型编码：%s", name, imp, typeEncoding);
                 NSLog(@"-------- 分割线 --------");
             }
-            
         }
     }
-    
     [super viewDidLoad];
 }
-
 @end

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hugin. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "AppDelegate.h" 
 
 @interface AppDelegate ()
 
@@ -14,9 +14,9 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     return YES;
 }
 
@@ -48,4 +48,6 @@
 }
 
 
+
 @end
+
